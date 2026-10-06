@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="درباره Yaqin Code — پلتفرم آموزش رایگان و دوزبانه HTML، CSS و جاوااسکریپت." />
+  <title>درباره ما — Yaqin Code</title>
+  <link rel="icon" href="assets/img/favicon.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;700&family=JetBrains+Mono:wght@400;600;700&family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/components.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="logo"><img src="assets/img/logo-header.png" alt="Yaqin Code" class="logo-img" /><span class="logo-text">YAQIN <span class="dot">CODE</span></span></a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html" data-i18n="nav.home">خانه</a>
+        <a href="about.html" data-i18n="nav.about">درباره</a>
+        <a href="contact.html" data-i18n="nav.contact">تماس با ما</a>
+        <a href="lessons.html" data-i18n="nav.lessons">درس‌ها</a>
+        <a href="login.html" class="btn btn-primary nav-login-mobile" data-i18n="nav.login">ورود</a>
+      </nav>
+
+      <div class="header-actions">
+        <button id="langToggle" class="pill-btn" aria-label="تغییر زبان">
+          <i class="fa-solid fa-globe"></i>
+          <span id="langLabel">EN</span>
+          <i class="fa-solid fa-chevron-down pill-chevron"></i>
+        </button>
+        <button id="themeToggle" class="pill-btn" aria-label="تغییر تم">
+          <i class="fa-solid fa-moon" id="themeIcon"></i>
+          <span id="themeLabel">تاریک</span>
+        </button>
+        <a href="login.html" class="btn btn-primary nav-login-desktop" data-i18n="nav.login">ورود</a>
+        <button id="menuToggle" class="icon-btn menu-toggle" aria-label="باز کردن منو" aria-expanded="false">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero" style="padding-bottom:8px;">
+    <div class="container">
+      <span class="eyebrow" data-i18n="about.eyebrow">چرا Yaqin Code؟</span>
+      <h1 data-i18n="about.title">یادگیری با تمرین واقعی، نه فقط تماشا</h1>
+      <p class="lead" data-i18n="about.desc" style="max-width:64ch;">هر درس یک ادیتور زنده دارد؛ کد را می‌نویسی و همون لحظه نتیجه رو می‌بینی — دقیقاً مثل محیط کار واقعی یک توسعه‌دهنده وب.</p>
+    </div>
+  </section>
+
+  <section class="about-section reveal" id="about">
+    <div class="container about-grid">
+      <div class="about-images">
+        <svg class="about-img about-img-1" viewBox="0 0 320 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="کدنویسی روی لپ‌تاپ">
+          <rect width="320" height="220" rx="14" fill="#12141A"/>
+          <rect x="24" y="24" width="272" height="150" rx="8" fill="#1E212B" stroke="#2A2E3A"/>
+          <circle cx="44" cy="42" r="4" fill="#E1789F"/>
+          <circle cx="58" cy="42" r="4" fill="#E8A93F"/>
+          <circle cx="72" cy="42" r="4" fill="#3ECFC0"/>
+          <rect x="40" y="60" width="90" height="8" rx="4" fill="#3ECFC0"/>
+          <rect x="40" y="78" width="140" height="8" rx="4" fill="#8B8F85"/>
+          <rect x="60" y="96" width="110" height="8" rx="4" fill="#E8A93F"/>
+          <rect x="40" y="114" width="160" height="8" rx="4" fill="#8B8F85"/>
+          <rect x="60" y="132" width="70" height="8" rx="4" fill="#E1789F"/>
+          <rect x="20" y="188" width="280" height="14" rx="7" fill="#2A2E3A"/>
+        </svg>
+        <svg class="about-img about-img-2" viewBox="0 0 320 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="نمایشگر کد رنگی">
+          <rect width="320" height="260" rx="14" fill="#181B23"/>
+          <rect x="20" y="20" width="280" height="220" rx="10" fill="#0D0F14"/>
+          <rect x="40" y="44" width="60" height="10" rx="5" fill="#E8A93F"/>
+          <rect x="106" y="44" width="100" height="10" rx="5" fill="#E7E9EE"/>
+          <rect x="60" y="68" width="40" height="10" rx="5" fill="#3ECFC0"/>
+          <rect x="106" y="68" width="140" height="10" rx="5" fill="#8B8F85"/>
+          <rect x="60" y="92" width="150" height="10" rx="5" fill="#E1789F"/>
+          <rect x="40" y="116" width="30" height="10" rx="5" fill="#E8A93F"/>
+          <rect x="76" y="116" width="120" height="10" rx="5" fill="#E7E9EE"/>
+          <rect x="60" y="140" width="90" height="10" rx="5" fill="#3ECFC0"/>
+          <rect x="40" y="164" width="180" height="10" rx="5" fill="#8B8F85"/>
+          <rect x="60" y="188" width="60" height="10" rx="5" fill="#E1789F"/>
+        </svg>
+      </div>
+      <div>
+        <h2 data-i18n="about.title2">داستان ما</h2>
+        <p data-i18n="about.desc2">Yaqin Code از یک ایده‌ی ساده شروع شد: خیلی از منابع آموزشی وب فقط توضیح می‌دن، ولی جایی برای تمرین واقعی نمی‌ذارن. ما می‌خواستیم جایی بسازیم که در همون لحظه‌ای که یاد می‌گیری، کد بزنی و نتیجه رو ببینی.</p>
+        <ul class="about-list">
+          <li data-i18n="about.li1">۹۰ درس ساختاریافته HTML، CSS و JavaScript</li>
+          <li data-i18n="about.li2">ادیتور کد زنده با پیش‌نمایش آنی</li>
+          <li data-i18n="about.li3">رابط کاربری کاملاً دوزبانه فارسی/انگلیسی</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="container reveal" style="padding: 20px 24px 70px;">
+    <div class="track-grid">
+      <div class="card track-html" style="text-align:center;">
+        <i class="fa-brands fa-html5" style="font-size:2.4rem; color:#E44D26;"></i>
+        <h3 style="margin-top:12px;">HTML</h3>
+        <p style="margin:0;" data-i18n="about.track.html">اسکلت هر صفحه‌ی وب</p>
+      </div>
+      <div class="card track-css" style="text-align:center;">
+        <i class="fa-brands fa-css3-alt" style="font-size:2.4rem; color:#264DE4;"></i>
+        <h3 style="margin-top:12px;">CSS</h3>
+        <p style="margin:0;" data-i18n="about.track.css">ظاهر و چیدمان صفحه</p>
+      </div>
+      <div class="card track-js" style="text-align:center;">
+        <i class="fa-brands fa-js" style="font-size:2.4rem; color:#F0DB4F;"></i>
+        <h3 style="margin-top:12px;">JavaScript</h3>
+        <p style="margin:0;" data-i18n="about.track.js">رفتار و تعامل صفحه</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <a href="index.html" class="logo"><img src="assets/img/logo-header.png" alt="Yaqin Code" class="logo-img" /><span class="logo-text">YAQIN <span class="dot">CODE</span></span></a>
+        <p class="footer-note">&copy; 2026 Yaqin Code — <span data-i18n="footer.rights">تمامی حقوق محفوظ است.</span></p>
+        <div class="social-links" aria-label="شبکه‌های اجتماعی">
+          <a href="https://t.me/Mr.Yaqin" target="_blank" rel="noopener" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
+          <a href="https://wa.me/YOUR_WHATSAPP_NUMBER" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="https://github.com/YOUR_GITHUB" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.linksTitle">لینک‌های مفید</h4>
+        <div class="footer-col-links">
+          <a href="index.html" data-i18n="nav.home">خانه</a>
+          <a href="about.html" data-i18n="nav.about">درباره</a>
+          <a href="contact.html" data-i18n="nav.contact">تماس با ما</a>
+          <a href="lessons.html" data-i18n="nav.lessons">درس‌ها</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/lang/fa.js"></script>
+  <script src="js/lang/en.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/header-state.js"></script>
+  <script src="js/animations.js"></script>
+</body>
+</html>

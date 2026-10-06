@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="لیست کامل ۹۰ درس HTML، CSS و جاوااسکریپت با ادیتور کد زنده." />
+  <title>درس‌ها — Yaqin Code</title>
+  <link rel="icon" href="assets/img/favicon.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;700&family=JetBrains+Mono:wght@400;600;700&family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/components.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="logo"><img src="assets/img/logo-header.png" alt="Yaqin Code" class="logo-img" /><span class="logo-text">YAQIN <span class="dot">CODE</span></span></a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html" data-i18n="nav.home">خانه</a>
+        <a href="about.html" data-i18n="nav.about">درباره</a>
+        <a href="contact.html" data-i18n="nav.contact">تماس با ما</a>
+        <a href="lessons.html" data-i18n="nav.lessons">درس‌ها</a>
+        <a href="#" id="logoutLinkMobile" class="nav-login-mobile" data-i18n="nav.logout">خروج</a>
+      </nav>
+
+      <div class="header-actions">
+        <button id="langToggle" class="pill-btn" aria-label="تغییر زبان">
+          <i class="fa-solid fa-globe"></i>
+          <span id="langLabel">EN</span>
+          <i class="fa-solid fa-chevron-down pill-chevron"></i>
+        </button>
+        <button id="themeToggle" class="pill-btn" aria-label="تغییر تم">
+          <i class="fa-solid fa-moon" id="themeIcon"></i>
+          <span id="themeLabel">تاریک</span>
+        </button>
+        <button id="logoutBtn" class="btn btn-ghost nav-login-desktop" data-i18n="nav.logout">خروج</button>
+        <button id="menuToggle" class="icon-btn menu-toggle" aria-label="باز کردن منو" aria-expanded="false">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero" style="padding-bottom:16px;">
+    <div class="container">
+      <span class="eyebrow" id="welcomeMsg"></span>
+      <h1 data-i18n="lessons.pageTitle">درس‌ها</h1>
+      <p class="lead" data-i18n="lessons.pageSubtitle">۳۰ درس عملی HTML، CSS و جاوااسکریپت.</p>
+    </div>
+  </section>
+
+  <main class="container" style="padding-bottom:60px;">
+    <div class="track-grid">
+      <div class="track-card track-html">
+        <div class="track-card-header">
+          <h3 data-i18n="track.html">HTML</h3>
+          <span class="track-card-count">30</span>
+        </div>
+        <div class="track-list" id="listHtml"></div>
+      </div>
+
+      <div class="track-card track-css">
+        <div class="track-card-header">
+          <h3 data-i18n="track.css">CSS</h3>
+          <span class="track-card-count">30</span>
+        </div>
+        <div class="track-list" id="listCss"></div>
+      </div>
+
+      <div class="track-card track-js">
+        <div class="track-card-header">
+          <h3 data-i18n="track.js">JavaScript</h3>
+          <span class="track-card-count">30</span>
+        </div>
+        <div class="track-list" id="listJs"></div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <a href="index.html" class="logo"><img src="assets/img/logo-header.png" alt="Yaqin Code" class="logo-img" /><span class="logo-text">YAQIN <span class="dot">CODE</span></span></a>
+        <p class="footer-note">&copy; 2026 Yaqin Code — <span data-i18n="footer.rights">تمامی حقوق محفوظ است.</span></p>
+        <div class="social-links" aria-label="شبکه‌های اجتماعی">
+          <a href="https://t.me/Mr.Yaqin" target="_blank" rel="noopener" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
+          <a href="https://wa.me/YOUR_WHATSAPP_NUMBER" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="https://github.com/YOUR_GITHUB" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.linksTitle">لینک‌های مفید</h4>
+        <div class="footer-col-links">
+          <a href="index.html" data-i18n="nav.home">خانه</a>
+          <a href="about.html" data-i18n="nav.about">درباره</a>
+          <a href="contact.html" data-i18n="nav.contact">تماس با ما</a>
+          <a href="lessons.html" data-i18n="nav.lessons">درس‌ها</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/lang/fa.js"></script>
+  <script src="js/lang/en.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/lessons-data.js"></script>
+  <script src="js/lessons-list.js"></script>
+</body>
+</html>

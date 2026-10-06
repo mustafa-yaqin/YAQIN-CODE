@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="با تیم Yaqin Code تماس بگیر — پیام مستقیم به تلگرام ارسال می‌شود." />
+  <title>تماس با ما — Yaqin Code</title>
+  <link rel="icon" href="assets/img/favicon.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;700&family=JetBrains+Mono:wght@400;600;700&family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/components.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="logo"><img src="assets/img/logo-header.png" alt="Yaqin Code" class="logo-img" /><span class="logo-text">YAQIN <span class="dot">CODE</span></span></a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html" data-i18n="nav.home">خانه</a>
+        <a href="about.html" data-i18n="nav.about">درباره</a>
+        <a href="contact.html" data-i18n="nav.contact">تماس با ما</a>
+        <a href="lessons.html" data-i18n="nav.lessons">درس‌ها</a>
+        <a href="login.html" class="btn btn-primary nav-login-mobile" data-i18n="nav.login">ورود</a>
+      </nav>
+
+      <div class="header-actions">
+        <button id="langToggle" class="pill-btn" aria-label="تغییر زبان">
+          <i class="fa-solid fa-globe"></i>
+          <span id="langLabel">EN</span>
+          <i class="fa-solid fa-chevron-down pill-chevron"></i>
+        </button>
+        <button id="themeToggle" class="pill-btn" aria-label="تغییر تم">
+          <i class="fa-solid fa-moon" id="themeIcon"></i>
+          <span id="themeLabel">تاریک</span>
+        </button>
+        <a href="login.html" class="btn btn-primary nav-login-desktop" data-i18n="nav.login">ورود</a>
+        <button id="menuToggle" class="icon-btn menu-toggle" aria-label="باز کردن منو" aria-expanded="false">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <section class="contact-section reveal" id="contact" style="padding-top:50px;">
+    <div class="container">
+      <div class="contact-card card">
+        <h1 data-i18n="contact.title">با ما در تماس باش</h1>
+        <p data-i18n="contact.lead">سوال یا پیشنهادی داری؟ برامون بنویس، مستقیم به تلگرام می‌رسه.</p>
+
+        <form id="contactForm" novalidate>
+          <div class="field" id="cf-name">
+            <label for="cname" data-i18n="contact.name">نام</label>
+            <input type="text" id="cname" name="name" data-i18n-placeholder="contact.name" />
+            <div class="field-error" data-i18n="contact.error.name">لطفاً نام خود را وارد کنید</div>
+          </div>
+          <div class="field" id="cf-email">
+            <label for="cemail" data-i18n="contact.email">ایمیل</label>
+            <input type="email" id="cemail" name="email" data-i18n-placeholder="contact.email" />
+            <div class="field-error" data-i18n="contact.error.email">ایمیل معتبر نیست</div>
+          </div>
+          <div class="field" id="cf-message">
+            <label for="cmessage" data-i18n="contact.message">پیام</label>
+            <textarea id="cmessage" name="message" rows="4" data-i18n-placeholder="contact.message"></textarea>
+            <div class="field-error" data-i18n="contact.error.message">پیام نمی‌تواند خالی باشد (حداقل ۱۰ کاراکتر)</div>
+          </div>
+          <button type="submit" class="btn btn-primary" data-i18n="contact.submit">ارسال پیام</button>
+          <p class="contact-hint" id="contactHint"></p>
+        </form>
+      </div>
+
+      <div class="social-links" aria-label="شبکه‌های اجتماعی" style="justify-content:center; margin-top:28px;">
+        <a href="https://t.me/Mr.Yaqin" target="_blank" rel="noopener" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
+        <a href="https://wa.me/YOUR_WHATSAPP_NUMBER" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="https://github.com/YOUR_GITHUB" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <a href="index.html" class="logo"><img src="assets/img/logo-header.png" alt="Yaqin Code" class="logo-img" /><span class="logo-text">YAQIN <span class="dot">CODE</span></span></a>
+        <p class="footer-note">&copy; 2026 Yaqin Code — <span data-i18n="footer.rights">تمامی حقوق محفوظ است.</span></p>
+        <div class="social-links" aria-label="شبکه‌های اجتماعی">
+          <a href="https://t.me/Mr.Yaqin" target="_blank" rel="noopener" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
+          <a href="https://wa.me/YOUR_WHATSAPP_NUMBER" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="https://github.com/YOUR_GITHUB" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.linksTitle">لینک‌های مفید</h4>
+        <div class="footer-col-links">
+          <a href="index.html" data-i18n="nav.home">خانه</a>
+          <a href="about.html" data-i18n="nav.about">درباره</a>
+          <a href="contact.html" data-i18n="nav.contact">تماس با ما</a>
+          <a href="lessons.html" data-i18n="nav.lessons">درس‌ها</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/lang/fa.js"></script>
+  <script src="js/lang/en.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/header-state.js"></script>
+  <script src="js/contact.js"></script>
+  <script src="js/animations.js"></script>
+</body>
+</html>

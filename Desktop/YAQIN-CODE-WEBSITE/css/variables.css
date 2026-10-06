@@ -1,0 +1,69 @@
+
+
+:root {
+  /* --- رنگ‌های خام (به همون نام‌هایی که خواسته شده) --- */
+  --white: #ffffff;
+  --ink: #0a0e14;
+  --ink-soft: #1c2330;
+  --blue: #2f6bff;
+  --blue-2: #7aa8ff;
+  --blue-glow: rgba(47, 107, 255, 0.35);
+
+  /* --- توکن‌های سیستم طراحی (بقیه‌ی CSS از این‌ها استفاده می‌کنه) --- */
+  --bg: var(--white);
+  --bg-elevated: rgba(255, 255, 255, 0.7);
+  --surface: rgba(10, 14, 20, 0.045);
+  --border: rgba(10, 14, 20, 0.08);
+  --text: var(--ink);
+  --text-muted: #4a5568;
+  --text-faint: #8891a3;
+
+  --accent: var(--blue);
+  --accent-contrast: #ffffff;
+  --accent-soft: rgba(47, 107, 255, 0.12);
+
+  --teal: var(--blue-2);
+  --pink: #e1789f;
+  --code-bg: #0a0e14;
+  --code-text: #eef2ff;
+
+  --success: #2f8f5b;
+  --danger: #e0453c;
+
+  --shadow: 0 10px 40px rgba(10, 14, 20, 0.08);
+  --radius-sm: 8px;
+  --radius-md: var(--radius, 18px);
+  --radius: 18px;
+
+  --font-display: 'Space Grotesk', 'Vazirmatn', sans-serif;
+  --font-body: 'Inter', 'Vazirmatn', sans-serif;
+  --font-code: 'JetBrains Mono', 'Courier New', monospace;
+}
+
+[data-theme="dark"] {
+  --bg: #070a12;
+  --bg-elevated: rgba(20, 26, 40, 0.65);
+  --surface: rgba(122, 168, 255, 0.06);
+  --border: rgba(122, 168, 255, 0.16);
+  --text: #eef2ff;
+  --text-muted: #9aa7c7;
+  --text-faint: #6b7690;
+
+  --accent: var(--blue-2);
+  --accent-contrast: #070a12;
+  --accent-soft: rgba(122, 168, 255, 0.14);
+
+  --teal: var(--blue-2);
+  --pink: #e1789f;
+  --code-bg: #050710;
+  --code-text: #eef2ff;
+
+  --success: #4fbe85;
+  --danger: #e4675e;
+
+  --shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* جهت صفحه بر اساس زبان */
+html[dir="rtl"] { direction: rtl; }
+html[dir="ltr"] { direction: ltr; }

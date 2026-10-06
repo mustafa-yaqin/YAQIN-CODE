@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="آموزش رایگان و دوزبانه HTML، CSS و جاوااسکریپت با ادیتور کد زنده — ۹۰ درس عملی برای شروع برنامه‌نویسی وب."
+    />
+    <title> YAQIN-CODE </title>
+    <link rel="icon" href="assets/img/favicon.png" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;700&family=JetBrains+Mono:wght@400;600;700&family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/components.css" />
+  </head>
+  <body>
+    <!-- ===================== HEADER ===================== -->
+    <header class="site-header">
+      <div class="container">
+        <a href="index.html" class="logo"
+          ><img
+            src="assets/img/logo-header.png"
+            alt="Yaqin Code"
+            class="logo-img"
+          /><span class="logo-text"
+            >YAQIN <span class="dot">CODE</span></span
+          ></a
+        >
+
+        <nav class="nav-links" id="navLinks">
+          <a href="index.html" data-i18n="nav.home">خانه</a>
+          <a href="about.html" data-i18n="nav.about">درباره</a>
+          <a href="contact.html" data-i18n="nav.contact">تماس با ما</a>
+          <a href="lessons.html" data-i18n="nav.lessons">درس‌ها</a>
+          <a
+            href="login.html"
+            class="btn btn-primary nav-login-mobile"
+            data-i18n="nav.login"
+            >ورود</a
+          >
+        </nav>
+
+        <div class="header-actions">
+          <button id="langToggle" class="pill-btn" aria-label="تغییر زبان">
+            <i class="fa-solid fa-globe"></i>
+            <span id="langLabel">EN</span>
+            <i class="fa-solid fa-chevron-down pill-chevron"></i>
+          </button>
+          <button id="themeToggle" class="pill-btn" aria-label="تغییر تم">
+            <i class="fa-solid fa-moon" id="themeIcon"></i>
+            <span id="themeLabel">تاریک</span>
+          </button>
+          <a
+            href="login.html"
+            class="btn btn-primary nav-login-desktop"
+            data-i18n="nav.login"
+            >ورود</a
+          >
+          <button
+            id="menuToggle"
+            class="icon-btn menu-toggle"
+            aria-label="باز کردن منو"
+            aria-expanded="false"
+          >
+            ☰
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- ===================== HERO ===================== -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow" data-i18n="hero.eyebrow">آموزش رایگان وب</span>
+          <h1 data-i18n="hero.title">
+            برنامه‌نویسی وب را با کدنویسی واقعی یاد بگیر
+          </h1>
+          <p class="lead" data-i18n="hero.lead">
+            سی درس عملی HTML، CSS و جاوااسکریپت، با ادیتور کد زنده — همین حالا
+            کد بزن و نتیجه رو ببین.
+          </p>
+          <div class="hero-actions">
+            <a
+              href="lessons.html"
+              class="btn btn-primary"
+              data-i18n="hero.cta.start"
+              >شروع یادگیری</a
+            >
+            <a
+              href="lessons.html"
+              class="btn btn-ghost"
+              data-i18n="hero.cta.lessons"
+              >مشاهده درس‌ها</a
+            >
+          </div>
+        </div>
+
+        <!-- عنصر امضادار: ادیتور زنده -->
+        <div class="mini-editor">
+          <div class="mini-editor-tabs">
+            <button class="active">index.html</button>
+          </div>
+          <textarea id="miniEditorCode" spellcheck="false"></textarea>
+          <div class="mini-editor-preview">
+            <div
+              class="mini-editor-preview-label"
+              data-i18n="hero.editor.result"
+            >
+              خروجی زنده
+            </div>
+            <iframe id="miniEditorPreview" title="پیش‌نمایش کد"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== STATS ===================== -->
+    <section class="container reveal stats-strip">
+      <div class="stat-item">
+        <span class="stat-number">۹۰+</span>
+        <span class="stat-label" data-i18n="home.stats.lessons">درس عملی</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">۳</span>
+        <span class="stat-label" data-i18n="home.stats.tracks"
+          >مسیر آموزشی</span
+        >
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">۱۰۰٪</span>
+        <span class="stat-label" data-i18n="home.stats.free">رایگان</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number"><i class="fa-solid fa-bolt"></i></span>
+        <span class="stat-label" data-i18n="home.stats.live">ادیتور زنده</span>
+      </div>
+    </section>
+
+    <!-- ===================== HOW IT WORKS ===================== -->
+    <section class="container reveal" style="padding: 50px 24px">
+      <div style="text-align: center; max-width: 560px; margin: 0 auto 36px">
+        <span class="eyebrow" data-i18n="home.how.eyebrow"
+          >چطور کار می‌کنه</span
+        >
+        <h2 data-i18n="home.how.title">سه قدم ساده تا یادگیری واقعی</h2>
+      </div>
+      <div class="how-grid">
+        <div class="how-step">
+          <div class="how-step-num">۱</div>
+          <i class="fa-solid fa-list-check how-step-icon"></i>
+          <h3 data-i18n="home.how.step1.title">یک درس انتخاب کن</h3>
+          <p data-i18n="home.how.step1.desc">
+            از بین ۹۰ درس HTML، CSS و JavaScript، هر جا خواستی شروع کن.
+          </p>
+        </div>
+        <div class="how-step">
+          <div class="how-step-num">۲</div>
+          <i class="fa-solid fa-keyboard how-step-icon"></i>
+          <h3 data-i18n="home.how.step2.title">کد بنویس</h3>
+          <p data-i18n="home.how.step2.desc">
+            توی ادیتور داخل مرورگر، خودت کد رو تایپ و ویرایش کن.
+          </p>
+        </div>
+        <div class="how-step">
+          <div class="how-step-num">۳</div>
+          <i class="fa-solid fa-eye how-step-icon"></i>
+          <h3 data-i18n="home.how.step3.title">نتیجه رو همون لحظه ببین</h3>
+          <p data-i18n="home.how.step3.desc">
+            بدون نیاز به نصب چیزی، خروجی کدت فوراً نمایش داده می‌شه.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== TEASER: About / Lessons / Contact ===================== -->
+    <section class="container reveal" style="padding: 10px 24px 60px">
+      <div class="track-grid">
+        <a
+          href="about.html"
+          class="card"
+          style="text-align: center; display: block"
+        >
+          <i
+            class="fa-solid fa-code"
+            style="font-size: 2rem; color: var(--accent)"
+          ></i>
+          <h3 style="margin-top: 14px" data-i18n="nav.about">درباره</h3>
+          <p style="margin: 0" data-i18n="about.desc">
+            هر درس یک ادیتور زنده دارد؛ کد را می‌نویسی و همون لحظه نتیجه رو
+            می‌بینی.
+          </p>
+        </a>
+        <a
+          href="lessons.html"
+          class="card"
+          style="text-align: center; display: block"
+        >
+          <i
+            class="fa-solid fa-graduation-cap"
+            style="font-size: 2rem; color: var(--accent)"
+          ></i>
+          <h3 style="margin-top: 14px" data-i18n="nav.lessons">درس‌ها</h3>
+          <p style="margin: 0" data-i18n="lessons.pageSubtitle">
+            ۹۰ درس عملی HTML، CSS و جاوااسکریپت.
+          </p>
+        </a>
+        <a
+          href="contact.html"
+          class="card"
+          style="text-align: center; display: block"
+        >
+          <i
+            class="fa-solid fa-paper-plane"
+            style="font-size: 2rem; color: var(--accent)"
+          ></i>
+          <h3 style="margin-top: 14px" data-i18n="nav.contact">تماس با ما</h3>
+          <p style="margin: 0" data-i18n="contact.lead">
+            سوال یا پیشنهادی داری؟ برامون بنویس.
+          </p>
+        </a>
+      </div>
+    </section>
+
+    <!-- ===================== TRACK ICONS (HTML/CSS/JS برند) ===================== -->
+    <section class="container reveal" style="padding: 10px 24px 60px">
+      <div class="track-grid">
+        <div class="card track-html" style="text-align: center">
+          <i
+            class="fa-brands fa-html5"
+            style="font-size: 2.6rem; color: #e44d26"
+          ></i>
+          <h3 style="margin-top: 12px">HTML</h3>
+        </div>
+        <div class="card track-css" style="text-align: center">
+          <i
+            class="fa-brands fa-css3-alt"
+            style="font-size: 2.6rem; color: #264de4"
+          ></i>
+          <h3 style="margin-top: 12px">CSS</h3>
+        </div>
+        <div class="card track-js" style="text-align: center">
+          <i
+            class="fa-brands fa-js"
+            style="font-size: 2.6rem; color: #f0db4f"
+          ></i>
+          <h3 style="margin-top: 12px">JavaScript</h3>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="logo"
+            ><img
+              src="assets/img/logo-header.png"
+              alt="Yaqin Code"
+              class="logo-img"
+            /><span class="logo-text"
+              >YAQIN <span class="dot">CODE</span></span
+            ></a
+          >
+          <p class="footer-note">
+            &copy; 2026 Yaqin Code —
+            <span data-i18n="footer.rights">تمامی حقوق محفوظ است.</span>
+          </p>
+          <div class="social-links" aria-label="شبکه‌های اجتماعی">
+            <a
+              href="https://t.me/Mr.Yaqin"
+              target="_blank"
+              rel="noopener"
+              aria-label="Telegram"
+              ><i class="fa-brands fa-telegram"></i>
+            </a>
+            <a
+              href="https://wa.me/YOUR_WHATSAPP_NUMBER"
+              target="_blank"
+              rel="noopener"
+              aria-label="WhatsApp"
+              ><i class="fa-brands fa-whatsapp"></i>
+            </a>
+
+            <a
+              href="https://github.com/YOUR_GITHUB"
+              target="_blank"
+              rel="noopener"
+              aria-label="GitHub"
+              ><i class="fa-brands fa-github"></i
+            ></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer.linksTitle">لینک‌های مفید</h4>
+          <div class="footer-col-links">
+            <a href="index.html" data-i18n="nav.home">خانه</a>
+            <a href="about.html" data-i18n="nav.about">درباره</a>
+            <a href="contact.html" data-i18n="nav.contact">تماس با ما</a>
+            <a href="lessons.html" data-i18n="nav.lessons">درس‌ها</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/lang/fa.js"></script>
+    <script src="js/lang/en.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/i18n.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/mini-editor.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/header-state.js"></script>
+    <script src="js/animations.js"></script>
+  </body>
+</html>

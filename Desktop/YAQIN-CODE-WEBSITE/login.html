@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="ورود یا ثبت‌نام در Yaqin Code برای دسترسی به دروس HTML، CSS و جاوااسکریپت." />
+  <title>ورود / ثبت‌نام — Yaqin Code</title>
+  <link rel="icon" href="assets/img/favicon.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;700&family=JetBrains+Mono:wght@400;600;700&family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/components.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="logo"><img src="assets/img/logo-header.png" alt="Yaqin Code" class="logo-img" /><span class="logo-text">YAQIN <span class="dot">CODE</span></span></a>
+      <div class="header-actions">
+        <button id="langToggle" class="pill-btn" aria-label="تغییر زبان">
+          <i class="fa-solid fa-globe"></i>
+          <span id="langLabel">EN</span>
+          <i class="fa-solid fa-chevron-down pill-chevron"></i>
+        </button>
+        <button id="themeToggle" class="pill-btn" aria-label="تغییر تم">
+          <i class="fa-solid fa-moon" id="themeIcon"></i>
+          <span id="themeLabel">تاریک</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="auth-wrapper">
+    <div class="auth-card">
+      <span class="auth-eyebrow">Yaqin Code</span>
+
+      <div class="auth-tabs">
+        <button id="tabLogin" class="active" data-i18n="login.submit">ورود</button>
+        <button id="tabSignup" data-i18n="signup.submit">ثبت‌نام</button>
+      </div>
+
+      <!-- ---------- Login form ---------- -->
+      <form id="loginForm" class="auth-form active" novalidate>
+        <h2 data-i18n="login.title">ورود به حساب کاربری</h2>
+        <div class="form-alert" id="loginAlert"></div>
+
+        <div class="field">
+          <label for="loginUsername" data-i18n="login.username">نام کاربری</label>
+          <input type="text" id="loginUsername" autocomplete="username" data-i18n-placeholder="login.username" />
+          <div class="field-error"></div>
+        </div>
+
+        <div class="field">
+          <label for="loginPassword" data-i18n="login.password">رمز عبور</label>
+          <input type="password" id="loginPassword" autocomplete="current-password" data-i18n-placeholder="login.password" />
+          <div class="field-error"></div>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;" data-i18n="login.submit">ورود</button>
+
+        <p class="auth-switch">
+          <span data-i18n="login.noAccount">حساب کاربری نداری؟</span>
+          <button type="button" data-switch-to="signup" data-i18n="login.signup">ثبت‌نام کن</button>
+        </p>
+      </form>
+
+      <!-- ---------- Signup form ---------- -->
+      <form id="signupForm" class="auth-form" novalidate>
+        <h2 data-i18n="signup.title">ساخت حساب کاربری</h2>
+        <div class="form-alert" id="signupAlert"></div>
+
+        <div class="field">
+          <label for="signupUsername" data-i18n="signup.username">نام کاربری</label>
+          <input type="text" id="signupUsername" autocomplete="username" data-i18n-placeholder="signup.username" />
+          <div class="field-error"></div>
+        </div>
+
+        <div class="field">
+          <label for="signupPassword" data-i18n="signup.password">رمز عبور</label>
+          <input type="password" id="signupPassword" autocomplete="new-password" data-i18n-placeholder="signup.password" />
+          <div class="field-error"></div>
+        </div>
+
+        <div class="field">
+          <label for="signupConfirm" data-i18n="signup.confirm">تکرار رمز عبور</label>
+          <input type="password" id="signupConfirm" autocomplete="new-password" data-i18n-placeholder="signup.confirm" />
+          <div class="field-error"></div>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;" data-i18n="signup.submit">ثبت‌نام</button>
+
+        <p class="auth-switch">
+          <span data-i18n="signup.haveAccount">قبلاً حساب داری؟</span>
+          <button type="button" data-switch-to="login" data-i18n="signup.login">وارد شو</button>
+        </p>
+      </form>
+    </div>
+  </main>
+
+  <script src="js/lang/fa.js"></script>
+  <script src="js/lang/en.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>

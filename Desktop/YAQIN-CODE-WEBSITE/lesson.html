@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="درس عملی با ادیتور کد زنده HTML، CSS و جاوااسکریپت — Yaqin Code." />
+  <title id="pageTitle">درس — Yaqin Code</title>
+  <link rel="icon" href="assets/img/favicon.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;700&family=JetBrains+Mono:wght@400;600;700&family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/components.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="logo"><img src="assets/img/logo-header.png" alt="Yaqin Code" class="logo-img" /><span class="logo-text">YAQIN <span class="dot">CODE</span></span></a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html" data-i18n="nav.home">خانه</a>
+        <a href="about.html" data-i18n="nav.about">درباره</a>
+        <a href="contact.html" data-i18n="nav.contact">تماس با ما</a>
+        <a href="lessons.html" data-i18n="nav.lessons">درس‌ها</a>
+        <a href="#" id="logoutLinkMobile" class="nav-login-mobile" data-i18n="nav.logout">خروج</a>
+      </nav>
+
+      <div class="header-actions">
+        <button id="langToggle" class="pill-btn" aria-label="تغییر زبان">
+          <i class="fa-solid fa-globe"></i>
+          <span id="langLabel">EN</span>
+          <i class="fa-solid fa-chevron-down pill-chevron"></i>
+        </button>
+        <button id="themeToggle" class="pill-btn" aria-label="تغییر تم">
+          <i class="fa-solid fa-moon" id="themeIcon"></i>
+          <span id="themeLabel">تاریک</span>
+        </button>
+        <button id="logoutBtn" class="btn btn-ghost nav-login-desktop" data-i18n="nav.logout">خروج</button>
+        <button id="menuToggle" class="icon-btn menu-toggle" aria-label="باز کردن منو" aria-expanded="false">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="lesson-header">
+      <div class="lesson-breadcrumb" id="breadcrumb"></div>
+      <h1 id="lessonTitle">—</h1>
+    </div>
+
+    <article class="lesson-explain" id="lessonExplain">
+      <!-- پاراگراف‌های توضیح توسط lesson-editor.js اینجا اضافه می‌شن -->
+    </article>
+
+    <div class="syntax-box" id="syntaxBox" style="display:none;">
+      <div class="syntax-label" data-i18n="lesson.syntax">نحوه‌ی نوشتن</div>
+      <pre><code id="syntaxCode"></code></pre>
+    </div>
+
+    <h3 class="try-it-heading" data-i18n="lesson.tryIt">حالا امتحانش کن 👇</h3>
+
+    <div class="full-editor">
+      <div class="full-editor-toolbar">
+        <div class="full-editor-tabs">
+          <button data-tab="html" class="active" data-i18n="lesson.tab.html">HTML</button>
+          <button data-tab="css" data-i18n="lesson.tab.css">CSS</button>
+          <button data-tab="js" data-i18n="lesson.tab.js">JS</button>
+        </div>
+        <div class="full-editor-actions">
+          <button id="resetBtn" class="btn btn-ghost" data-i18n="lesson.reset">بازنشانی کد</button>
+          <button id="runBtn" class="btn btn-primary" data-i18n="lesson.run">اجرا</button>
+        </div>
+      </div>
+
+      <div class="full-editor-body">
+        <div class="full-editor-pane">
+          <textarea id="codeHtml" class="active" spellcheck="false"></textarea>
+          <textarea id="codeCss" spellcheck="false"></textarea>
+          <textarea id="codeJs" spellcheck="false"></textarea>
+        </div>
+        <div class="full-editor-preview">
+          <div class="full-editor-preview-label" data-i18n="lesson.result">نتیجه</div>
+          <iframe id="preview" title="پیش‌نمایش کد"></iframe>
+        </div>
+      </div>
+    </div>
+
+    <div class="lesson-nav">
+      <button id="prevBtn" class="btn btn-ghost" data-i18n="lesson.prev">درس قبلی</button>
+      <button id="nextBtn" class="btn btn-primary" data-i18n="lesson.next">درس بعدی</button>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <a href="index.html" class="logo"><img src="assets/img/logo-header.png" alt="Yaqin Code" class="logo-img" /><span class="logo-text">YAQIN <span class="dot">CODE</span></span></a>
+        <p class="footer-note">&copy; 2026 Yaqin Code — <span data-i18n="footer.rights">تمامی حقوق محفوظ است.</span></p>
+        <div class="social-links" aria-label="شبکه‌های اجتماعی">
+          <a href="https://t.me/Mr.Yaqin" target="_blank" rel="noopener" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
+          <a href="https://wa.me/YOUR_WHATSAPP_NUMBER" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="https://github.com/YOUR_GITHUB" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.linksTitle">لینک‌های مفید</h4>
+        <div class="footer-col-links">
+          <a href="index.html" data-i18n="nav.home">خانه</a>
+          <a href="about.html" data-i18n="nav.about">درباره</a>
+          <a href="contact.html" data-i18n="nav.contact">تماس با ما</a>
+          <a href="lessons.html" data-i18n="nav.lessons">درس‌ها</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/lang/fa.js"></script>
+  <script src="js/lang/en.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/lessons-data.js"></script>
+  <script src="js/lesson-content.js"></script>
+  <script src="js/lesson-editor.js"></script>
+</body>
+</html>
